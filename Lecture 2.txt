@@ -1,0 +1,118 @@
+									Shell Scripting for DevOps Engineers by KASTRO
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+													LECTURE 02
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1. Variables
+variable is used to store data in key-value format
+Name = Kastro
+Age = 30
+Gender = Male
+They acts as placeholders for values that can be used throughout the script
+variables doesn't require explicit data type declarations
+A variable can store any type of value
+Accessing variable - use $ symbol to access the value of a variable
+$<VariableName>
+
+Types of variables;
+1. System (Environment) Variables - predefined by the system. The variables which are already defined and used by our system are called as System Variables
+Ex: $USER, $HOME, $PATH
+
+To see all the system variables; env
+
+2. User defined Variables - created by user based on the requirement
+
+Temporary variables - are created using 'export' command. These variables cannot be accessed once the terminal closes. the assigned values to the variable will be lost
+
+Permanent variables - even if i lose connection to the terminal, the values assigned to a variable will still be available
+
+How to make a variable as a permanent?
+	- .bashrc
+	- source .bashrc
+
+How to see the variables available in the .bashrc file
+	- cat -n .bashrc
+
+To remove a variable
+unset <VariableName>
+
+Points to remember;
+1. Cannot start with a digit (Ex: 123Kastro, 611Kiran)
+2. Cannot contain 3 special characters (- @ #) (Ex: Kastro-, Kiran@, Trainer#)
+3. Use UPPERCASE for environment variables and lowercase for user-defined variables. But it is not mandatory
+
+
+2. Operators
+Operator is used to perform any task execution
+
+Types of operators;
+2.1. Arithmetic Operators: To perform mathematical operations
+Operators: + - * / %
+
+Syntax: $ ( (expression) ) 
+
+Add two numbers;
+100 and 300
+echo $ ( ( 100 + 300 ) ) ----> Output: 400
+
+2.2. Relational or Comparison operators: To compare two values. it is used to compare values in conditional statements
+Operators:
+Equal to				: == or eq
+Not equal to			: !=
+Greater than			: > or gt
+Greater than or equal	: >= or ge
+Less than				: < or lt
+Less than or equal		: <= or le
+
+Syntax:
+
+if [ condition ]; then
+	#Statements
+elif [ condition ]; then
+	#Statements.
+else [ condition ]; then
+	#Statements
+fi
+
+3. Conditional statements - used to execute the commands based on conditions
+Syntax:
+
+if [ condition ]; then
+	#Statements
+elif [ condition ]; then
+	#Statements.
+else [ condition ]; then
+	#Statements
+fi
+
+
+A - 90-100
+B - 80-89
+C - 70-79
+D - 60-69
+E - Below 60
+
+
+Assignment:
+Task 1:
+Write a shell file to check whether a file is available or not in a specific path
+
+Output: The <FileName> is available in <Path>
+ 
+Task 2:
+Write a shell file to check what is the file type (whether it is a directory or a normal file)
+
+Output:  "The <Name> is a Normal File" (if its a file), otherwise it should print "The <Name> is a directory"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
